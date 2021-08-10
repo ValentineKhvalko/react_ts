@@ -20,8 +20,6 @@ const Articles: FC = () => {
     try {
       const response:AxiosResponse<GET200_Articles> = await axiosInstance.get(`/v2/everything?q=${searchValue}&apiKey=${API_KEY}`)
       setArt(response.data.articles);
-      console.log(art);
-      
     } catch(err: any) {
       console.log(err);
       
