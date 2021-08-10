@@ -1,6 +1,6 @@
-// import './index.html';
-import '../styles/style.scss';
 import ReactDOM from 'react-dom';
-import { App } from './App';
+import App from './App';
+import "core-js/stable";
+import "regenerator-runtime/runtime";
 
 ReactDOM.render(<App />, document.getElementById('root'));

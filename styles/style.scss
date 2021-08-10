@@ -2,10 +2,111 @@
 
 body {
   background-color: #fff;
+  font-size: 16px;
+  font-weight: 400;
 }
 
-h1 {
-  margin: 0;
-  color: green;
-  font-weight: 300;
+#app {
+  padding: 0 20px;
+  font-family: "Arial";
+}
+
+.header {
+  margin: 20px auto 40px;
+  color: #000;
+  font-weight: 400;
+  text-align: center;
+}
+
+.search__container {
+
+  input {
+    width: 360px;
+    margin-right: 20px;
+    padding: 15px 11px;
+    outline: none;
+    border: 1px solid #000;
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+
+  button {
+    padding: 15px 25px;
+    color: #fff;
+    background-color: #ff0033;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.clearArt {
+  margin: 20px 0;
+  width: max-content;
+  padding: 15px 25px;
+  color: #fff;
+  background-color: #ff0033;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+}
+
+.emptyArt {
+  margin: 20px 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.articles__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.article {
+  display: flex;
+  align-items: center;
+}
+
+.article__field {
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.article__field.title,
+.article__field.author,
+.article__field.delete {
+  flex: 0 0 10%;
+}
+
+.article__field.content,
+.article__field.description {
+  flex: 0 0 25%;
+}
+
+.article__field.urlToImage {
+  flex: 0 0 20%;
+}
+
+.article__field.urlToImage img {
+  width: 100%;
+}
+
+.article__field.delete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.deleteArt {
+  padding: 11px;
+  border-radius: 3px;
+  border: 1px solid #ff0000;
+  color: #ff0000;
+  cursor: pointer;
+}
+
+.deleteArt:hover {
+  color: #fff;
+  background-color: #ff0000;
 }

@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
@@ -9,8 +10,8 @@ const isProd = !isDev;
 const filename = (ext) => isDev ? `[name].${ext}` : `[name].[contenthash].${ext}`;
 
 module.exports = {
-  context: path.resolve(__dirname, 'src'),
-  entry: './index.tsx',
+  context: __dirname,
+  entry: './src/index.tsx',
   resolve: {
     extensions:  ['.tsx', '.ts', '.js'],
   },
@@ -36,6 +37,7 @@ module.exports = {
         collapseWhitespace: isProd,
       }
     }),
+    new ForkTsCheckerWebpackPlugin(),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin()
   ],
